@@ -1,0 +1,17 @@
+<div *ngIf="account">
+<h2>My Account</h2>
+<h3>Owner {{account.owner.name}} {{account.owner.surname}}</h3>
+<p>Bank "{{account.bank.name}}"</p>
+  <div><label>Id: </label>{{account.id}}</div>
+  <div>
+    <label>Account Number: </label>
+    <input [(ngModel)] = "account.accNumber" placeholder="number"> <!--bidirekcioni binding-->
+  </div>
+  <div>
+    <label>Current balance: </label>
+    <input [(ngModel)] = "account.currentBalance" placeholder="currentBalance">
+  </div>
+
+  <button (click)="goBack()">Back</button>
+  <button (click)="save()">Save</button>
+</div>

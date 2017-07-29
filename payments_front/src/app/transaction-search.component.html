@@ -1,0 +1,12 @@
+<div id="search-component">
+  <label>Transaction Search: </label>
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" placeholder="account number"/>
+
+  <div>
+    <div *ngFor="let transaction of transactions | async"
+          (click)="gotoDetail(transaction)"
+          class="search-result">
+          From: {{transaction.payFrom.accNumber}} To: {{transaction.payTo.accNumber}} Purpose: {{transaction.paymentPurpose}} Amount: {{transaction.amount}}
+        </div>
+      </div>
+    </div>

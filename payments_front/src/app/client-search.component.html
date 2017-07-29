@@ -1,0 +1,12 @@
+<div id="search-component">
+  <label>Client Search: </label>
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" placeholder="client's surname"/>
+
+  <div>
+    <div *ngFor="let client of clients | async"
+          (click)="gotoDetail(client)"
+          class="search-result">
+          {{client.surname}} {{client.name}}
+        </div>
+      </div>
+    </div>

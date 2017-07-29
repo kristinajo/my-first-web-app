@@ -1,0 +1,16 @@
+<h2>Accounts</h2>
+
+<ul class="accounts">
+  <li
+    *ngFor="let account of accounts"
+    (click) = "onSelect(account)"
+    [class.selected]="account === selectedAccount"
+  >
+    <span class="badge">{{account.id}}</span> {{account.accNumber}}
+    <button class="delete"
+      (click)="delete(account);
+      $event.stopPropagation()">x</button>
+  </li>
+</ul>
+
+<button class="details" (click)="gotoDetail()">View Details</button>

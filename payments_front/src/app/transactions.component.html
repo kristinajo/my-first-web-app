@@ -1,0 +1,14 @@
+<h2>Transactions</h2>
+<transaction-search></transaction-search>
+<ul class="transactions">
+
+  <li
+    *ngFor="let transaction of transactions"
+    (click) = "onSelect(transaction)"
+    [class.selected]="transaction === selectedTransaction"
+  >
+    <span class="badge">{{transaction.id}}</span> {{transaction.paymentPurpose}} {{transaction.amount}}RSD
+  </li>
+</ul>
+<button (click)="gotoDetail()">View Details</button>
+<button (click)="gotoNewTransaction()">New Transaction</button>

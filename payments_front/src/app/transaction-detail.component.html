@@ -1,0 +1,32 @@
+<div *ngIf="transaction">
+  <div><label>Id: </label>{{transaction.id}}</div>
+  <div>
+    <label>Pay from account: </label>
+    <input [(ngModel)] = "transaction.payFrom.accNumber" placeholder="pay from"> <!--bidirekcioni binding-->
+  </div>
+  <div>
+    <label>Pay to account: </label>
+    <input [(ngModel)] = "transaction.payTo.accNumber" placeholder="pay to">
+  </div>
+  <div>
+    <label>Amount: </label>
+    <input [(ngModel)] = "transaction.amount" placeholder="amount">
+  </div>
+  <div>
+    <label>Date: </label>
+    <input [(ngModel)] = "transaction.dateOfExecution" placeholder="date">
+  </div>
+  <div>
+    <label>Payment code: </label>
+    <input [(ngModel)] = "transaction.paymentCode" placeholder="payment code">
+  </div>
+  <div>
+    <label>Purpose: </label>
+    <input [(ngModel)] = "transaction.paymentPurpose" placeholder="purpose">
+  </div>
+  <div>
+    <label>Reference number: </label>
+    <input [(ngModel)] = "transaction.referenceNumber" placeholder="reference number">
+  </div>
+  <button (click)="goBack()">Back</button>
+</div>

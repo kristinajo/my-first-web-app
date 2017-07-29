@@ -1,0 +1,38 @@
+<div *ngIf="client">
+  <h2>{{client.name}} details</h2> <!--interpolacija-->
+  <div><label>Id: </label>{{client.id}}</div>
+  <div>
+    <label>Name: </label>
+    <input [(ngModel)] = "client.name" placeholder="name"> <!--bidirekcioni binding-->
+  </div>
+  <div>
+    <label>Surname: </label>
+    <input [(ngModel)] = "client.surname" placeholder="surname">
+  </div>
+  <div>
+    <label>Personal Id: </label>
+    <input [(ngModel)] = "client.personalId" placeholder="personalId">
+  </div>
+  <div>
+    <label>Email: </label>
+    <input [(ngModel)] = "client.email" placeholder="email">
+  </div>
+  <div>
+    <label>Mobile phone: </label>
+    <input [(ngModel)] = "client.mobilePhoneNumber" placeholder="mobilePhoneNumber">
+  </div>
+  <div>
+    <label>Street: </label>
+    <input [(ngModel)] = "client.address.street" placeholder="street">
+  </div>
+  <div>
+    <label>City: </label>
+    <input [(ngModel)] = "client.address.city" placeholder="city">
+  </div>
+  <div>
+    <label>Country: </label>
+    <input [(ngModel)] = "client.address.country" placeholder="coutry">
+  </div>
+  <button (click)="goBack()">Back</button>
+  <button (click)="save()">Save</button>
+</div>

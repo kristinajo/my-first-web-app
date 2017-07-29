@@ -1,0 +1,68 @@
+#table_nalog {
+	width: 900px;
+  padding-bottom: 50px;
+}
+#table_left {
+	width: 450px;
+  float: left;
+  padding-right: 50px;
+  position: relative;
+}
+#table_right {
+	width: 300px;
+  float: right;
+  position: relative;
+}
+#table_nalog p {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	margin-top:10px;
+}
+#table_right p {
+	float: left;
+	margin:10px 20px 0px 0px;
+	clear:both;
+}
+#table_right input, #table_right select, #iznos_box {
+	float:left;
+  clear:both;
+}
+input#iznos {
+	width: 110px;
+	float: left;
+}
+.np_sifra_placanja {
+	background:white;
+}
+.valuta, .np_valuta, .model, .np_model {
+	width:40px;
+}
+.np_iznos {
+	width: 110px;
+}
+input#iznos_dec, #table_right input.np_iznos_dec {
+  width: 18px;
+  clear: none;
+}
+#table_right span {
+	float: left;
+}
+#table_left textarea:focus, #table_right Input:focus {
+  border: 2px solid pink;
+}
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer; cursor: hand;
+}
+button:hover {
+  background-color: #dccfd6;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}

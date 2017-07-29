@@ -1,0 +1,43 @@
+<h3>New Transaction</h3>
+<button (click)="add(transaction)">Submit</button>
+<div id="table_nalog">
+	<div id="table_left">
+	<p>Uplatilac: </p>
+    <textarea id="uplatilac"  name="uplatilac_1" rows="3" cols="43" wrap="hard" maxlength="110" autofocus></textarea>
+	<p>Svrha uplate: </p>
+    <textarea id="svrha"  name="svrha_1" rows="3" cols="43" wrap="hard" maxlength="110" #paymentPurpose></textarea>
+	<p>Primalac: </p>
+    <textarea id="primalac"  name="primalac_1" rows="3" cols="43" wrap="hard" maxlength="110"></textarea>
+
+</div>
+  <div id="table_right">
+  	<p>Šifra plaćanja:</p>
+    <input id="sifra_1" class="np_sifra_placanja" name="sifra_1" list="sifre_1" value="" #paymentCode/>
+    <datalist id="sifre_1">
+      <option value="220">Promet robe i usluga - medufazna potrošnja</option>
+      <option value="221">Promet robe i usluga – finalna potrošnja</option>
+      <option value="222">Usluge javnih preduzeca</option>
+      <option value="231">Carine i druge uvozne dažbine</option>
+      <option value="253">Bezgotovinska uplata javnih prihoda izuzev poreza i doprinosa po odbitku</option>
+      <option value="254">Uplata poreza i doprinosa po odbitku</option>
+      <option value="272">Aktivna kamata</option>
+      <option value="273">Polaganje orocenih depozita</option>
+      <option value="276">Otplata kratkorocnih kredita</option>
+      <option value="277">Otplata dugorocnih kredita</option>
+      <option value="281">Pozajmice osnivaca za likvidnost</option>
+      <option value="284">Platne kartice</option>
+      <option value="289">Transakcije po nalogu gradjana</option>
+      <option value="290">Druge transakcije</option>
+    </datalist>
+  <p>Valuta:</p>
+    <input class="np_valuta" type="text" name="valuta_1" maxlength="3" value="RSD">
+  <p>Iznos:</p>
+    <input class="np_iznos" type="text" name="iznos_1" maxlength="20" value="" #amount/>
+  <p>Račun (nalogodavca):</p>
+    <input type="text" name="racun_1" maxlength="18" value="" #payFrom/>
+  <p>Model:</p>
+    <input class="np_model" type="text" name="model_1" maxlength="4" value="" />
+  <p>Poziv na broj:</p>
+    <input type="text" name="poziv_1" maxlength="20" value="" #referenceNumber/>
+  <p>Račun (poverioca):</p>
+    <input type="text" name="racun2_1" maxlength="18" #payTo/>
