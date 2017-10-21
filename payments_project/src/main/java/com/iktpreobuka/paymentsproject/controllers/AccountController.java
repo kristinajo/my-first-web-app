@@ -164,7 +164,7 @@ public class AccountController {
 		}
 	}
 	
-	@RequestMapping(method = RequestMethod.GET, value = "/by-bank")
+	@RequestMapping(method =RequestMethod.GET, value = "/by-bank")
 	public ResponseEntity<?> findAccountsByBankName(@RequestParam String bankName) {
 		return new ResponseEntity<List<AccountEntity>>((List<AccountEntity>) accountDao.findByBankName(bankName), HttpStatus.OK);
 	}
